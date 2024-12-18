@@ -32,7 +32,7 @@ public final class RealtimeAPI: NSObject, Sendable {
 }
 
 /// Helper methods for connecting to the OpenAI Realtime API.
-extension RealtimeAPI {
+public extension RealtimeAPI {
 	/// Connect to the OpenAI WebSocket Realtime API with the given request.
 	static func webSocket(connectingTo request: URLRequest) -> RealtimeAPI {
 		RealtimeAPI(connector: WebSocketConnector(connectingTo: request))
