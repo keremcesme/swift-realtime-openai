@@ -56,7 +56,7 @@ public final class Conversation: Sendable {
 		} }
 	}
 
-	private init(client: RealtimeAPI) {
+	public init(client: RealtimeAPI) {
 		self.client = client
 		(errors, errorStream) = AsyncStream.makeStream(of: ServerError.self)
 
